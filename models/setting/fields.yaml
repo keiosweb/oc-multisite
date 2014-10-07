@@ -1,0 +1,20 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    domain:
+        label: Domain to bind theme to
+        type: text
+        comment: Must be a full url, ie.: http://octobercms.com
+
+    theme:
+        label: Theme to bind
+        type: dropdown
+        comment: Select theme for this domain
+
+    is_protected:
+        label: Protect backend on this domain
+        type: checkbox
+        default: false
+        comment: Check if you want to prohibit backend entry from that domain, throws HTTP 401, uses /error page

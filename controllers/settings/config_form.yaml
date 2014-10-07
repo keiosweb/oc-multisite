@@ -1,0 +1,27 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Setting
+
+# Model Form Field configuration
+form: $/voipdeploy/multisite/models/setting/fields.yaml
+
+# Model Class name
+modelClass: Voipdeploy\Multisite\Models\Setting
+
+# Default redirect location
+defaultRedirect: voipdeploy/multisite/settings
+
+# Create page
+create:
+    title: Create Bind
+    redirect: voipdeploy/multisite/settings/update/:id
+    redirectClose: voipdeploy/multisite/settings
+
+# Update page
+update:
+    title: Edit Bind
+    redirect: voipdeploy/multisite/settings
+    redirectClose: voipdeploy/multisite/settings

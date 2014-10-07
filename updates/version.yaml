@@ -1,0 +1,6 @@
+1.0.0:
+    - First version of Multisite
+    - create_settings_table.php
+1.0.1:
+    - Add is_protected value to all records
+    - settings_add_is_protected.php

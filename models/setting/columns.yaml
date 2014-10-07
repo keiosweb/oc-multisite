@@ -1,0 +1,16 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    domain:
+        label: Domain
+        searchable: true
+
+    theme:
+        label: Theme
+        searchable: true
+
+    is_protected:
+        label: Protect backend
+        type: switch
