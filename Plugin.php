@@ -2,12 +2,14 @@
 
 use System\Classes\PluginBase;
 use Voipdeploy\Multisite\Models\Setting;
+use BackendAuth;
 use Backend;
 use Config;
 use Event;
 use Cache;
 use Request;
 use App;
+use Flash;
 
 /**
  * Multisite Plugin Information File
@@ -59,11 +61,21 @@ class Plugin extends PluginBase
          */
         $binds = Cache::rememberForever('voipdeploy_multisite_settings', function () {
 
-            $cacheableRecords = Setting::generateCacheableRecords();
-
+            try {
+                $cacheableRecords = Setting::generateCacheableRecords();
+            } catch (\Illuminate\Database\QueryException $e) {
+                if (BackendAuth::check())
+                    Flash::error('Multisite plugin tables not found, force reinstall plugin.');
+                return null;
+            }
             return $cacheableRecords;
 
         });
+
+        /*
+         * Oooops something went wrong, abort.
+         */
+        if ($binds === null) return;
 
         /*
          * Check if this request is in backend scope and is using domain,

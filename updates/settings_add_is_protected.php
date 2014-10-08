@@ -14,7 +14,7 @@ class SettingsAddIsProtected extends Migration
 
     public function down()
     {
-        Schema::table('users', function ($table) {
+        Schema::table('voipdeploy_multisite_settings', function ($table) {
             $table->dropColumn('is_protected');
         });
     }
