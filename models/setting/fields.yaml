@@ -4,17 +4,17 @@
 
 fields:
     domain:
-        label: Domain to bind theme to
+        label: voipdeploy.multisite::lang.domain.label 
         type: text
-        comment: Must be a full url, ie.: http://octobercms.com
+        comment: voipdeploy.multisite::lang.domain.comment
 
     theme:
-        label: Theme to bind
+        label: voipdeploy.multisite::lang.domain.theme-label
         type: dropdown
-        comment: Select theme for this domain
+        comment: voipdeploy.multisite::lang.domain.theme-comment
 
     is_protected:
-        label: Protect backend on this domain
+        label: voipdeploy.multisite::lang.domain.protect-label
         type: checkbox
         default: false
-        comment: Check if you want to prohibit backend entry from that domain, throws HTTP 401, uses /error page
+        comment: voipdeploy.multisite::lang.domain.protect-comment

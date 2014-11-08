@@ -4,13 +4,13 @@
 
 columns:
     domain:
-        label: Domain
+        label: voipdeploy.multisite::lang.tables.domain
         searchable: true
 
     theme:
-        label: Theme
+        label: voipdeploy.multisite::lang.tables.theme
         searchable: true
 
     is_protected:
-        label: Protect backend
+        label: voipdeploy.multisite::lang.tables.protected
         type: switch
