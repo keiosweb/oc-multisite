@@ -41,3 +41,4 @@ class Settings extends Controller
         Flash::success('Multisite cache cleared.');
     }
 }
+
