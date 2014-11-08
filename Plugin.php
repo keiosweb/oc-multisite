@@ -27,8 +27,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'Multisite',
-            'description' => 'Multisite support plugin for October',
+            'name' => 'voipdeploy.multisite::lang.details.title',
+            'description' => 'voipdeploy.multisite::lang.details.description',
             'author' => 'VoipDeploy',
             'icon' => 'icon-cubes'
         ];
@@ -38,8 +38,8 @@ class Plugin extends PluginBase
     {
         return [
             'multisite' => [
-                'label' => 'Multisite',
-                'description' => 'Manage multisite domain to theme binds.',
+                'label' => 'voipdeploy.multisite::lang.details.title',
+                'description' => 'voipdeploy.multisite::lang.details.description',
                 'category' => 'system::lang.system.categories.cms',
                 'icon' => 'icon-cubes',
                 'url' => Backend::url('voipdeploy/multisite/settings'),
@@ -65,7 +65,7 @@ class Plugin extends PluginBase
                 $cacheableRecords = Setting::generateCacheableRecords();
             } catch (\Illuminate\Database\QueryException $e) {
                 if (BackendAuth::check())
-                    Flash::error('Multisite plugin tables not found, force reinstall plugin.');
+                    Flash::error(trans('voipdeploy.multisite:lang.flash.db-error'));
                 return null;
             }
             return $cacheableRecords;

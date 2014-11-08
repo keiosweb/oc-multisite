@@ -16,12 +16,12 @@ defaultRedirect: voipdeploy/multisite/settings
 
 # Create page
 create:
-    title: Create Bind
+    title: voipdeploy.multisite::lang.controller.create
     redirect: voipdeploy/multisite/settings/update/:id
     redirectClose: voipdeploy/multisite/settings
 
 # Update page
 update:
-    title: Edit Bind
+    title: voipdeploy.multisite::lang.controller.create
     redirect: voipdeploy/multisite/settings
     redirectClose: voipdeploy/multisite/settings

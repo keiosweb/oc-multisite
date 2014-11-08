@@ -38,7 +38,7 @@ class Settings extends Controller
     public function onClearCache()
     {
         Cache::forget('voipdeploy_multisite_settings');
-        Flash::success('Multisite cache cleared.');
+        Flash::success('voipdeploy.multisite::flash.cache-clear');
     }
 }
 

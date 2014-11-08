@@ -9,7 +9,7 @@ list: $/voipdeploy/multisite/models/setting/columns.yaml
 modelClass: Voipdeploy\Multisite\Models\Setting
 
 # List Title
-title: Manage Multisite theme binds
+title: voipdeploy.multisite::details.description2
 
 # Link URL for each record
 recordUrl: voipdeploy/multisite/settings/update/:id
