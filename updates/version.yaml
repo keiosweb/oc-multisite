@@ -7,3 +7,4 @@
 1.0.2:
     - Added cache clear function
     - Fixed migrations and not-installed bug
+1.0.3: Added translations
