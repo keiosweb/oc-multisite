@@ -6,6 +6,7 @@ use System\Classes\SettingsManager;
 use Voipdeploy\Multisite\Models\Setting;
 use Cache;
 use Flash;
+use Lang;
 
 /**
  * Settings Back-end Controller
@@ -38,7 +39,7 @@ class Settings extends Controller
     public function onClearCache()
     {
         Cache::forget('voipdeploy_multisite_settings');
-        Flash::success('voipdeploy.multisite::flash.cache-clear');
+        Flash::success(Lang::get('voipdeploy.multisite::lang.flash.cache-clear'));
     }
 }
 
