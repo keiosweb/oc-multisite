@@ -1,5 +1,7 @@
 ##Domain-based multisite plugin for OctoberCMS
 
+**Link to company repo: http://gitlab.c-call.eu/october_plugins/oc-multisite-plugin**
+
 ####Features:
 - Register themes for different domains
 - Filter which domains can use backend
