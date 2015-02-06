@@ -4,6 +4,10 @@
 - Register themes for different domains
 - Filter which domains can use backend
 
+####Warning
+
+If you use Multisite plugin from OctoberCMS Market, please do not use this repository. Voipdeploy brand is merging with Keios and this version of the plugin has all namespaces and table names replaced. As soon as our brand is upgraded in OctoberCMS Market, we will remove this notice.
+
 ####How to use:
 
 1. Navigate to Settings -> CMS -> Multisite

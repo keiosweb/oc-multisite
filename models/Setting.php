@@ -1,4 +1,4 @@
-<?php namespace Voipdeploy\Multisite\Models;
+<?php namespace Keios\Multisite\Models;
 
 use Model;
 use Config;
@@ -20,7 +20,7 @@ class Setting extends Model
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'voipdeploy_multisite_settings';
+    public $table = 'keios_multisite_settings';
 
     /**
      * @var array Guarded fields
@@ -75,13 +75,13 @@ class Setting extends Model
     public function afterSave()
     {
         // forget current data
-        Cache::forget('voipdeploy_multisite_settings');
+        Cache::forget('keios_multisite_settings');
 
         // get all records available now
         $cacheableRecords = Setting::generateCacheableRecords();
 
         //save them in cache
-        Cache::forever('voipdeploy_multisite_settings', $cacheableRecords);
+        Cache::forever('keios_multisite_settings', $cacheableRecords);
     }
 
     public static function generateCacheableRecords()

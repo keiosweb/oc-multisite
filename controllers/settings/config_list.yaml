@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/voipdeploy/multisite/models/setting/columns.yaml
+list: $/keios/multisite/models/setting/columns.yaml
 
 # Model Class name
-modelClass: Voipdeploy\Multisite\Models\Setting
+modelClass: Keios\Multisite\Models\Setting
 
 # List Title
-title: voipdeploy.multisite::details.description2
+title: keios.multisite::details.description2
 
 # Link URL for each record
-recordUrl: voipdeploy/multisite/settings/update/:id
+recordUrl: keios/multisite/settings/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

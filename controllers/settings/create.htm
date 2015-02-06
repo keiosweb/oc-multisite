@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('voipdeploy/multisite/settings') ?>"><?= trans('voipdeploy.multisite::lang.controller.settings') ?></a></li>
+        <li><a href="<?= Backend::url('keios/multisite/settings') ?>"><?= trans('keios.multisite::lang.controller.settings') ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -17,21 +17,21 @@
                     type="submit"
                     data-request="onSave"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="<?= trans('voipdeploy.multisite::lang.controller.creating') ?>"
+                    data-load-indicator="<?= trans('keios.multisite::lang.controller.creating') ?>"
                     class="btn btn-primary">
-                    <?= trans('voipdeploy.multisite::lang.controller.create') ?>
+                    <?= trans('keios.multisite::lang.controller.create') ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="<?= trans('voipdeploy.multisite::lang.controller.creating') ?>"
+                    data-load-indicator="<?= trans('keios.multisite::lang.controller.creating') ?>"
                     class="btn btn-default">
-                    <?= trans('voipdeploy.multisite::lang.controller.create-and-close') ?>
+                    <?= trans('keios.multisite::lang.controller.create-and-close') ?>
                 </button>
                 <span class="btn-text">
-                   <?= trans('voipdeploy.multisite::lang.controller.or') ?> <a href="<?= Backend::url('voipdeploy/multisite/settings') ?>"><?= trans('voipdeploy.multisite::lang.controller.cancel') ?></a>
+                   <?= trans('keios.multisite::lang.controller.or') ?> <a href="<?= Backend::url('keios/multisite/settings') ?>"><?= trans('keios.multisite::lang.controller.cancel') ?></a>
                 </span>
             </div>
         </div>
@@ -41,6 +41,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('voipdeploy/multisite/settings') ?>" class="btn btn-default"><?= trans('voipdeploy.multisite::lang.controller.return') ?></a></p>
+    <p><a href="<?= Backend::url('keios/multisite/settings') ?>" class="btn btn-default"><?= trans('keios.multisite::lang.controller.return') ?></a></p>
 
 <?php endif ?>

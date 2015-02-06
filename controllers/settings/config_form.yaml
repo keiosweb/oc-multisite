@@ -6,22 +6,22 @@
 name: Setting
 
 # Model Form Field configuration
-form: $/voipdeploy/multisite/models/setting/fields.yaml
+form: $/keios/multisite/models/setting/fields.yaml
 
 # Model Class name
-modelClass: Voipdeploy\Multisite\Models\Setting
+modelClass: Keios\Multisite\Models\Setting
 
 # Default redirect location
-defaultRedirect: voipdeploy/multisite/settings
+defaultRedirect: keios/multisite/settings
 
 # Create page
 create:
-    title: voipdeploy.multisite::lang.controller.create
-    redirect: voipdeploy/multisite/settings/update/:id
-    redirectClose: voipdeploy/multisite/settings
+    title: keios.multisite::lang.controller.create
+    redirect: keios/multisite/settings/update/:id
+    redirectClose: keios/multisite/settings
 
 # Update page
 update:
-    title: voipdeploy.multisite::lang.controller.create
-    redirect: voipdeploy/multisite/settings
-    redirectClose: voipdeploy/multisite/settings
+    title: keios.multisite::lang.controller.create
+    redirect: keios/multisite/settings
+    redirectClose: keios/multisite/settings

@@ -1,4 +1,4 @@
-<?php namespace Voipdeploy\Multisite\Updates;
+<?php namespace Keios\Multisite\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;
@@ -8,7 +8,7 @@ class CreateSettingsTable extends Migration
 
     public function up()
     {
-        Schema::create('voipdeploy_multisite_settings', function($table)
+        Schema::create('keios_multisite_settings', function($table)
         {
             $table->engine = 'InnoDB';
             $table->increments('id');
@@ -20,7 +20,7 @@ class CreateSettingsTable extends Migration
 
     public function down()
     {
-        Schema::dropIfExists('voipdeploy_multisite_settings');
+        Schema::dropIfExists('keios_multisite_settings');
     }
 
 }

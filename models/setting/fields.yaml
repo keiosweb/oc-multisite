@@ -4,17 +4,17 @@
 
 fields:
     domain:
-        label: voipdeploy.multisite::lang.domain.label 
+        label: keios.multisite::lang.domain.label 
         type: text
-        comment: voipdeploy.multisite::lang.domain.comment
+        comment: keios.multisite::lang.domain.comment
 
     theme:
-        label: voipdeploy.multisite::lang.domain.theme-label
+        label: keios.multisite::lang.domain.theme-label
         type: dropdown
-        comment: voipdeploy.multisite::lang.domain.theme-comment
+        comment: keios.multisite::lang.domain.theme-comment
 
     is_protected:
-        label: voipdeploy.multisite::lang.domain.protect-label
+        label: keios.multisite::lang.domain.protect-label
         type: checkbox
         default: false
-        comment: voipdeploy.multisite::lang.domain.protect-comment
+        comment: keios.multisite::lang.domain.protect-comment

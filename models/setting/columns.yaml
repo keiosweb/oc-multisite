@@ -4,13 +4,13 @@
 
 columns:
     domain:
-        label: voipdeploy.multisite::lang.tables.domain
+        label: keios.multisite::lang.tables.domain
         searchable: true
 
     theme:
-        label: voipdeploy.multisite::lang.tables.theme
+        label: keios.multisite::lang.tables.theme
         searchable: true
 
     is_protected:
-        label: voipdeploy.multisite::lang.tables.protected
+        label: keios.multisite::lang.tables.protected
         type: switch

@@ -1,7 +1,7 @@
-<?php namespace Voipdeploy\Multisite;
+<?php namespace Keios\Multisite;
 
 use System\Classes\PluginBase;
-use Voipdeploy\Multisite\Models\Setting;
+use Keios\Multisite\Models\Setting;
 use BackendAuth;
 use Backend;
 use Config;
@@ -27,8 +27,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name' => 'voipdeploy.multisite::lang.details.title',
-            'description' => 'voipdeploy.multisite::lang.details.description',
+            'name' => 'keios.multisite::lang.details.title',
+            'description' => 'keios.multisite::lang.details.description',
             'author' => 'VoipDeploy',
             'icon' => 'icon-cubes'
         ];
@@ -38,11 +38,11 @@ class Plugin extends PluginBase
     {
         return [
             'multisite' => [
-                'label' => 'voipdeploy.multisite::lang.details.title',
-                'description' => 'voipdeploy.multisite::lang.details.description',
+                'label' => 'keios.multisite::lang.details.title',
+                'description' => 'keios.multisite::lang.details.description',
                 'category' => 'system::lang.system.categories.cms',
                 'icon' => 'icon-cubes',
-                'url' => Backend::url('voipdeploy/multisite/settings'),
+                'url' => Backend::url('keios/multisite/settings'),
                 'order' => 500,
                 'keywords' => 'multisite domains themes'
             ]
@@ -59,13 +59,13 @@ class Plugin extends PluginBase
          * Get domain to theme bindings from cache, if it's not there, load them from database,
          * save to cache and use for theme selection.
          */
-        $binds = Cache::rememberForever('voipdeploy_multisite_settings', function () {
+        $binds = Cache::rememberForever('keios_multisite_settings', function () {
 
             try {
                 $cacheableRecords = Setting::generateCacheableRecords();
             } catch (\Illuminate\Database\QueryException $e) {
                 if (BackendAuth::check())
-                    Flash::error(trans('voipdeploy.multisite:lang.flash.db-error'));
+                    Flash::error(trans('keios.multisite:lang.flash.db-error'));
                 return null;
             }
             return $cacheableRecords;

@@ -1,9 +1,9 @@
-<?php namespace Voipdeploy\Multisite\Controllers;
+<?php namespace Keios\Multisite\Controllers;
 
 use BackendMenu;
 use Backend\Classes\Controller;
 use System\Classes\SettingsManager;
-use Voipdeploy\Multisite\Models\Setting;
+use Keios\Multisite\Models\Setting;
 use Cache;
 use Flash;
 use Lang;
@@ -26,7 +26,7 @@ class Settings extends Controller
         parent::__construct();
 
         BackendMenu::setContext('October.System', 'system', 'settings');
-        SettingsManager::setContext('Voipdeploy.Multisite', 'multisite');
+        SettingsManager::setContext('Keios.Multisite', 'multisite');
     }
 
     public function onDelete()
@@ -38,8 +38,8 @@ class Settings extends Controller
 
     public function onClearCache()
     {
-        Cache::forget('voipdeploy_multisite_settings');
-        Flash::success(Lang::get('voipdeploy.multisite::lang.flash.cache-clear'));
+        Cache::forget('keios_multisite_settings');
+        Flash::success(Lang::get('keios.multisite::lang.flash.cache-clear'));
     }
 }
 
