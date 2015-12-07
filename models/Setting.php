@@ -50,7 +50,7 @@ class Setting extends Model
      */
     public function getThemeOptions()
     {
-        $path = base_path() . Config::get('cms.themesDir');
+        $path = base_path() . Config::get('cms.themesPath');
         $themeDirs = [];
 
         foreach (new DirectoryIterator($path) as $file) {

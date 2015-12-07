@@ -21,6 +21,8 @@ class Settings extends Controller
     public $formConfig = 'config_form.yaml';
     public $listConfig = 'config_list.yaml';
 
+    public $requiredPermissions = ['keios.multisite.manage_domains'];
+    
     public function __construct()
     {
         parent::__construct();
@@ -42,4 +44,3 @@ class Settings extends Controller
         Flash::success(Lang::get('keios.multisite::lang.flash.cache-clear'));
     }
 }
-
