@@ -108,7 +108,7 @@ class Plugin extends PluginBase
          * Listen for CMS activeTheme event, change theme according to binds
          * If there's no match, let CMS set active theme
          */
-        Event::listen('cms.activeTheme', function () use ($binds, $currentHostUrl) {
+        Event::listen('cms.theme.getActiveTheme', function () use ($binds, $currentHostUrl) {
             foreach ($binds as $domain => $bind) {
                 if (preg_match('/' . $currentHostUrl . '/i', $domain)) {
                     Config::set('app.url', $domain);
