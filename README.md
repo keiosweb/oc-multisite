@@ -1,6 +1,6 @@
 ##Domain-based multisite plugin for OctoberCMS
 
-**Link to company repo: http://gitlab.c-call.eu/october_plugins/oc-multisite-plugin**
+**https://bitbucket.org/keiosdevs/oc-multisite**
 
 ####Features:
 - Register themes for different domains
