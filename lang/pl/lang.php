@@ -1,8 +1,8 @@
 <?php
 return [
     'plugin' => [
-        'manage_domains' => 'Setup multisite domains',
-        'tab' => 'Multisite plugin'
+        'manage_domains' => 'Wsparcie dla wielu domen',
+        'tab' => 'Multisite'
     ],
     
     'details' => [
@@ -53,4 +53,5 @@ return [
         'protected' => 'Chroniona?'
     ]
 ]
-;
+
+];

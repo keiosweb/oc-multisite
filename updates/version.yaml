@@ -3,6 +3,7 @@
     - create_settings_table.php
 1.0.1:
     - Add is_protected value to all records
+    - settings_add_is_protected.php
 1.0.2:
     - Added cache clear function
     - Fixed migrations and not-installed bug
