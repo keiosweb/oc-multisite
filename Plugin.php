@@ -29,7 +29,7 @@ class Plugin extends PluginBase
         return [
             'name' => 'keios.multisite::lang.details.title',
             'description' => 'keios.multisite::lang.details.description',
-            'author' => 'VoipDeploy',
+            'author' => 'Keios',
             'icon' => 'icon-cubes'
         ];
     }
@@ -44,7 +44,18 @@ class Plugin extends PluginBase
                 'icon' => 'icon-cubes',
                 'url' => Backend::url('keios/multisite/settings'),
                 'order' => 500,
-                'keywords' => 'multisite domains themes'
+                'keywords' => 'multisite domains themes',
+                'permissions' => ['keios.multisite.manage_domains']
+            ]
+        ];
+    }
+
+    public function registerPermissions()
+    {
+        return [
+            'keios.multisite.manage_domains'  => [
+                'tab'   => 'keios.multisite::lang.plugin.tab',
+                'label' => 'keios.multisite::lang.plugin.manage_domains'
             ]
         ];
     }
@@ -97,7 +108,7 @@ class Plugin extends PluginBase
          * Listen for CMS activeTheme event, change theme according to binds
          * If there's no match, let CMS set active theme
          */
-        Event::listen('cms.activeTheme', function () use ($binds, $currentHostUrl) {
+        Event::listen('cms.theme.getActiveTheme', function () use ($binds, $currentHostUrl) {
             foreach ($binds as $domain => $bind) {
                 if (preg_match('/' . $currentHostUrl . '/i', $domain)) {
                     Config::set('app.url', $domain);

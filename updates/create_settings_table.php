@@ -14,6 +14,7 @@ class CreateSettingsTable extends Migration
             $table->increments('id');
             $table->text('domain');
             $table->text('theme');
+            $table->boolean('is_protected')->default(false);
             $table->timestamps();
         });
     }
