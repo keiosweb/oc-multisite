@@ -15,3 +15,6 @@
     - keios_migrate.php
 1.0.5: Minor bugfix
 1.0.6: Added permissions management
+1.1.0:
+    - Code inspect fixes
+    - October Stable event patch

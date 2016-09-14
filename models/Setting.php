@@ -13,9 +13,12 @@ class Setting extends Model
 {
     use \October\Rain\Database\Traits\Validation;
 
+    /**
+     * @var array
+     */
     public $rules = [
         'domain' => 'required|url',
-        'theme' => 'required',
+        'theme'  => 'required',
     ];
     /**
      * @var string The database table used by the model.
@@ -32,29 +35,21 @@ class Setting extends Model
      */
     protected $fillable = ['domain', 'theme', 'is_protected'];
 
-    /**
-     * @var array Relations
-     */
-    public $hasOne = [];
-    public $hasMany = [];
-    public $belongsTo = [];
-    public $belongsToMany = [];
-    public $morphTo = [];
-    public $morphOne = [];
-    public $morphMany = [];
-    public $attachOne = [];
-    public $attachMany = [];
-
     /*
      * Get all currently available themes, return them to form widget for selection
      */
+    /**
+     * @return array
+     */
     public function getThemeOptions()
     {
-        $path = base_path() . Config::get('cms.themesPath');
+        $path = base_path().Config::get('cms.themesPath');
         $themeDirs = [];
 
         foreach (new DirectoryIterator($path) as $file) {
-            if ($file->isDot()) continue;
+            if ($file->isDot()) {
+                continue;
+            }
             if ($file->isDir()) {
                 $name = $file->getBasename();
                 $themeDirs[$name] = $name;
@@ -64,9 +59,15 @@ class Setting extends Model
         return $themeDirs;
     }
 
+    /**
+     * @return bool
+     * @throws \UnexpectedValueException
+     */
     public function beforeSave()
     {
-        if (preg_match('/' . Request::getHost() . '/', $this->domain) && $this->is_protected) return false;
+        if (preg_match('/'.Request::getHost().'/', $this->domain) && $this->is_protected) {
+            return false;
+        }
     }
 
     /*
@@ -84,6 +85,9 @@ class Setting extends Model
         Cache::forever('keios_multisite_settings', $cacheableRecords);
     }
 
+    /**
+     * @return array
+     */
     public static function generateCacheableRecords()
     {
         $allRecords = Setting::all()->toArray();
@@ -91,8 +95,8 @@ class Setting extends Model
 
         foreach ($allRecords as $record) {
             $cacheableRecords[$record['domain']] = [
-                'theme' => $record['theme'],
-                'is_protected' => $record['is_protected']
+                'theme'        => $record['theme'],
+                'is_protected' => $record['is_protected'],
             ];
         }
 

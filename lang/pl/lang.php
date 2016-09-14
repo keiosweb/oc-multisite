@@ -31,7 +31,9 @@ return [
         'save' => 'Zapisz',
         'saving' => 'Zapisywanie ...',
         'save-and-close' => 'Zapisz i zamknij',
-        'save-delete' => 'Usuń zapis'
+        'save-delete' => 'Usuń zapis',
+        'new' => 'Nowa domena',
+        'clear' => 'Wyczyść cache',
     ],
     
     'domain' => [
@@ -40,18 +42,22 @@ return [
         'theme-label' => 'Szablon',
         'theme-comment' => 'Wybierz szablon dla tej domeny',
         'protect-label' => 'Chroń szablon dla tej domeny',
-        'protect-comment' => 'Zaznacz, jeśli chcesz zablokować dostęp do backendu przez tą domenę. Wyświetla Błąd 401 lub stronę /error'
+        'protect-comment' => 'Zaznacz, jeśli chcesz zablokować dostęp do backendu przez tą domenę. Wyświetla Błąd 401 lub stronę /error',
+        'theme' => 'Szablon',
+        'protect' => 'Chroń dostęp do backendu',
     ],
     
     'flash' => [
-        'cache-clear' => 'Cache został wyczyszczony.'
-    ]
-    ,
+        'cache-clear' => 'Cache został wyczyszczony.',
+        'cache' => 'Cache został wyczyszczony',
+    ],
     'tables' => [
         'domain' => 'Domena',
         'theme' => 'Szablon',
-        'protected' => 'Chroniona?'
-    ]
-]
-
+        'protected' => 'Chroniona?',
+    ],
+    'permissions' => [
+        'settings' => 'Dostęp do ustawień',
+        'tab' => 'Domeny',
+    ],
 ];

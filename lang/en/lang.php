@@ -31,7 +31,9 @@ return [
         'save' => 'Save',
         'saving' => 'Saving ...',
         'save-and-close' => 'Save and close',
-        'save-delete' => 'Delete save'
+        'save-delete' => 'Delete save',
+        'new' => 'New domain',
+        'clear' => 'Clear Cache',
     ],
     
     'domain' => [
@@ -40,18 +42,24 @@ return [
         'theme-label' => 'Theme',
         'theme-comment' => 'Select theme for this domain',
         'protect-label' => 'Protect backend on this domain',
-        'protect-comment' => 'comment: Check if you want to prohibit backend entry from that domain, throws HTTP 401, uses /error page'
+        'protect-comment' => 'comment: Check if you want to prohibit backend entry from that domain, throws HTTP 401, uses /error page',
+        'theme' => 'Theme',
+        'protect' => 'Protect Backend',
     ],
     
     'flash' => [
         'cache-clear' => 'Multisite cache cleared.',
-        'db-error' => 'Multisite plugin tables not found, force reinstall plugin.'
+        'db-error' => 'Multisite plugin tables not found, force reinstall plugin.',
+        'cache' => 'Cache cleared',
     ],
     
     'tables' => [
         'domain' => 'Domain',
         'theme' => 'Theme',
-        'protected' => 'Protected?'
-    ]
-    
+        'protected' => 'Protected?',
+    ],
+    'permissions' => [
+        'tab' => 'MultiSite',
+        'settings' => 'Settings access',
+    ],
 ];

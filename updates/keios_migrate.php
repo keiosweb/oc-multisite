@@ -3,8 +3,15 @@
 use Seeder;
 use System\Classes\PluginManager;
 
+/**
+ * Class KeiosMigrate
+ * @package Keios\Multisite\Seeds
+ */
 class KeiosMigrate extends Seeder
 {
+    /**
+     * Migrates old table to new
+     */
     public function run()
     {
         if (\Schema::hasTable('voipdeploy_multisite_settings')) {

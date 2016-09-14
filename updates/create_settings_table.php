@@ -3,6 +3,10 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 
+/**
+ * Class CreateSettingsTable
+ * @package Keios\Multisite\Updates
+ */
 class CreateSettingsTable extends Migration
 {
 
